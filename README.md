@@ -20,19 +20,11 @@ This repository contains clean, well-optimized, and explained solutions to vario
    ```bash
    git clone https://github.com/SahajDang/LeetCode_Problems.git
    cd LeetCode_Problems
-Browse through the folders to find categorized problems and their respective solutions.
-
-Each file is named according to the problem and includes a short explanation or comments where necessary.
-
-🌱 Future Plans
- Add problem links to each solution.
-
- Include time and space complexity analysis.
-
- Add more problems and topics weekly.
+   
+Each file is named according to the problem.
 
 🤝 Contributions
-Feel free to fork the repo and suggest improvements or optimizations! Pull requests are welcome if you find a better solution or want to fix something.
+- Feel free to fork the repo and suggest improvements or optimizations! Pull requests are welcome if you find a better solution or want to fix something.
 
 📬 Contact
 If you'd like to connect or have any suggestions, feel free to reach out via LinkedIn or GitHub!
