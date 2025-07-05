@@ -1,0 +1,40 @@
+class Solution {
+    public char kthCharacter(long k, int[] operations) {
+        int n = operations.length;
+        long[] lengths = new long[n + 1];
+        lengths[0] = 1;
+
+        for (int i = 0; i < n; i++) {
+            if (operations[i] == 0) {
+                lengths[i + 1] = lengths[i] * 2;
+            } else {
+                lengths[i + 1] = lengths[i] * 2;
+            }
+            // You may want to cap to prevent overflow:
+            if (lengths[i + 1] > k) {
+                lengths[i + 1] = k; // No need to compute beyond k
+            }
+        }
+
+        int incrementCount = 0;
+
+        for (int i = n; i >= 1; i--) {
+            if (operations[i - 1] == 0) {
+                if (k > lengths[i - 1]) {
+                    k -= lengths[i - 1];
+                }
+            } else {
+                if (k > lengths[i - 1]) {
+                    k -= lengths[i - 1];
+                    incrementCount++;
+                }
+            }
+        }
+
+        // Now k=1 means original 'a'
+        char c = 'a';
+        // Apply increments
+        c = (char) (((c - 'a' + incrementCount) % 26) + 'a');
+        return c;
+    }
+}
